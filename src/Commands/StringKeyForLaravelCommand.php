@@ -1,6 +1,6 @@
 <?php
 
-namespace StringKeyForLaravel\StringKeyForLaravel\Commands;
+namespace StringKeyForLaravel\Commands;
 
 use Illuminate\Console\Command;
 

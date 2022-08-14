@@ -1,6 +1,6 @@
 <?php
 
-namespace StringKeyForLaravel\StringKeyForLaravel;
+namespace StringKeyForLaravel;
 
 class StringKeyForLaravel
 {

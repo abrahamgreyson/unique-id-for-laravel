@@ -1,16 +1,16 @@
 <?php
 
-namespace StringKeyForLaravel\StringKeyForLaravel\Facades;
+namespace StringKeyForLaravel\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \StringKeyForLaravel\StringKeyForLaravel\StringKeyForLaravel
+ * @see StringKeyForLaravel
  */
 class StringKeyForLaravel extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return \StringKeyForLaravel\StringKeyForLaravel\StringKeyForLaravel::class;
+        return \StringKeyForLaravel\StringKeyForLaravel::class;
     }
 }

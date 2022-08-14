@@ -1,6 +1,3 @@
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/support-ukraine.svg?t=1" />](https://supportukrainenow.org)
-
 # This is my package string-key-for-laravel
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/abe/string-key-for-laravel.svg?style=flat-square)](https://packagist.org/packages/abe/string-key-for-laravel)
