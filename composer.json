@@ -1,24 +1,24 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "abe/string-key-for-laravel",
+    "description": "This is my package string-key-for-laravel",
     "keywords": [
-        ":vendor_name",
         "laravel",
-        ":package_slug"
+        "string-key-for-laravel",
+        "primary key",
+        "id",
+        "uuid",
+        "snowflake"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/abrahamgreyson/string-key-for-laravel",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
-            "role": "Developer"
+            "name": "abraham greyson",
+            "email": "82011220@qq.com"
         }
     ],
     "require": {
-        "php": "^8.1",
-        "spatie/laravel-package-tools": "^1.9.2",
-        "illuminate/contracts": "^9.0"
+        "php": "^8.0",
     },
     "require-dev": {
         "laravel/pint": "^1.0",
@@ -35,13 +35,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "StringKeyForLaravel\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "StringKeyForLaravel\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,12 +53,15 @@
         "sort-packages": true
     },
     "extra": {
+        "abe": {
+            "wechat": "abrahamgreyson"
+        },
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "StringKeyForLaravel\\StringKeyForLaravelServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "StringKeyForLaravel": "StringKeyForLaravel\\Facades\\StringKeyForLaravel"
             }
         }
     },
