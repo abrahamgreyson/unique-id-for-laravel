@@ -52,7 +52,7 @@ php artisan vendor:publish --tag="string-key-for-laravel-views"
 ## Usage
 
 ```php
-$stringKeyForLaravel = new StringKeyForLaravel\StringKeyForLaravel();
+$stringKeyForLaravel = new StringKeyForLaravel\UniqueIdForLaravel();
 echo $stringKeyForLaravel->echoPhrase('Hello, StringKeyForLaravel!');
 ```
 

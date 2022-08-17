@@ -1,12 +1,12 @@
 <?php
 
-namespace StringKeyForLaravel\Commands;
+namespace UniqueIdForLaravel\Commands;
 
 use Illuminate\Console\Command;
 
-class StringKeyForLaravelCommand extends Command
+class UniqueIdForLaravelCommand extends Command
 {
-    public $signature = 'string-key-for-laravel';
+    public $signature = 'abe:key';
 
     public $description = 'My command';
 
