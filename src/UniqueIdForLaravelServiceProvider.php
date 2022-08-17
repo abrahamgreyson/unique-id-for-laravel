@@ -16,15 +16,14 @@ class UniqueIdForLaravelServiceProvider extends ServiceProvider
         Model::booted(static function (Model $model): void {
             Model::saving(static function (Model $model): void {
                 dd('saving');
-                if (!$model->id) {
+                if (! $model->id) {
                     $model->id = Str::uuid();
                 }
             });
-            Model::creating(static function(Model $model): void {
+            Model::creating(static function (Model $model): void {
                 dd('creating');
                 $model->id = Str::uuid();
             });
         });
-
     }
 }
