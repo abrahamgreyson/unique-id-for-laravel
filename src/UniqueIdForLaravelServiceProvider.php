@@ -2,9 +2,7 @@
 
 namespace UniqueIdForLaravel;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
-use Str;
 
 class UniqueIdForLaravelServiceProvider extends ServiceProvider
 {
@@ -13,6 +11,5 @@ class UniqueIdForLaravelServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-    
     }
 }
