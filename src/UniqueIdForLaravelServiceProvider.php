@@ -13,5 +13,6 @@ class UniqueIdForLaravelServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+    
     }
 }
