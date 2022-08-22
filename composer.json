@@ -19,7 +19,7 @@
     ],
     "require": {
         "php": "^8.0",
-        "illuminate/support": "^7.0|^8.0|^9.0",
+        "ramsey/uuid": "^3.0|^4.0",
         "illuminate/database": "^7.0|^8.0|^9.0"
     },
     "require-dev": {
@@ -50,6 +50,9 @@
         "test": "vendor/bin/pest",
         "test-coverage": "vendor/bin/pest --coverage",
         "format": "vendor/bin/pint"
+    },
+    "suggest": {
+        "ramsey/uuid": "Required to use uuid key (^3.7|^4.0)."
     },
     "config": {
         "sort-packages": true
