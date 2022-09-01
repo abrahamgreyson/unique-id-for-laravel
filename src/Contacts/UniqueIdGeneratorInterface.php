@@ -4,7 +4,6 @@ namespace UniqueIdForLaravel\Contracts;
 
 /**
  * Interface UniqueIdGeneratorInterface
- * @package UniqueIdForLaravel
  */
 interface UniqueIdGeneratorInterface
 {

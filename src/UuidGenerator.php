@@ -4,9 +4,8 @@ namespace UniqueIdForLaravel;
 
 class UuidGenerator implements Contracts\UniqueIdGeneratorInterface
 {
-
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function generate(): string
     {

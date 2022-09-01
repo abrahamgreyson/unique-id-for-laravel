@@ -4,9 +4,8 @@ namespace UniqueIdForLaravel;
 
 class SequenceNumberGenerator implements Contracts\UniqueIdGeneratorInterface
 {
-
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function generate(): string
     {
