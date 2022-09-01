@@ -15,10 +15,10 @@ trait HasUniqueId
     public static function bootHasUniqueId()
     {
         static::creating(static function (Model $model) {
-                $model->{$model->getKeyName()} = static::generateUniqueId();
+            $model->{$model->getKeyName()} = static::generateUniqueId();
         });
         static::saving(static function (Model $model) {
-            if (!$model->{$model->getKeyName()}) {
+            if (! $model->{$model->getKeyName()}) {
                 // fill the attribute whether it is fillable or not
                 $model->setAttribute($model->getKeyName(), static::generateUniqueId());
             }
@@ -27,6 +27,7 @@ trait HasUniqueId
 
     /**
      * generate a unique id
+     *
      * @return string
      */
     public static function generateUniqueId(): string
