@@ -8,7 +8,9 @@ namespace UniqueIdForLaravel\Contracts;
 interface UniqueIdGeneratorInterface
 {
     /**
-     * @return string
+     * Generate a unique id.
+     *
+     * @return int|string
      */
-    public function generate(): string;
+    public function generate(): int|string;
 }

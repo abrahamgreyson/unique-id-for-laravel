@@ -2,6 +2,8 @@
 
 namespace UniqueIdForLaravel;
 
+use Str;
+
 class UuidGenerator implements Contracts\UniqueIdGeneratorInterface
 {
     /**
@@ -9,7 +11,6 @@ class UuidGenerator implements Contracts\UniqueIdGeneratorInterface
      */
     public function generate(): string
     {
-        // TODO: Implement generate() method.
-        return 'uuid';
+        return Str::orderedUuid()->toString();
     }
 }
