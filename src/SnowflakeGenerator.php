@@ -19,7 +19,7 @@ class SnowflakeGenerator implements Contracts\UniqueIdGeneratorInterface
     public function generate(): int
     {
         // The default start time of the snowflake algorithm is 2022-09-09 00:00:00,
-        // or you can set the start time yourself.
+        // or you can set the start time yourself after you publish the config file.
         $startTime = config('unique-id.start_time', $this->startTime);
         $startTimeTimestamp = strtotime($startTime);
 

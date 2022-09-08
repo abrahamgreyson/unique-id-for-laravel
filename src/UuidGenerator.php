@@ -8,8 +8,6 @@ class TimeOrderedUuidGenerator implements Contracts\UniqueIdGeneratorInterface
 {
     /**
      * Generate a unique id
-     *
-     * @throws \Exception
      */
     public function generate(): string
     {
