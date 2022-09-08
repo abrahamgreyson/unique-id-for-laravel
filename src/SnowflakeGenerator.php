@@ -16,7 +16,7 @@ class SnowflakeGenerator implements Contracts\UniqueIdGeneratorInterface
      *
      * @throws \Exception
      */
-    public function generate(): int|string
+    public function generate(): int
     {
         // The default start time of the snowflake algorithm is 2022-09-09 00:00:00,
         // or you can set the start time yourself.

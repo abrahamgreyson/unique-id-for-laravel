@@ -4,13 +4,17 @@ namespace UniqueIdForLaravel;
 
 use Str;
 
-class UuidGenerator implements Contracts\UniqueIdGeneratorInterface
+class TimeOrderedUuidGenerator implements Contracts\UniqueIdGeneratorInterface
 {
     /**
-     * {@inheritDoc}
+     * Generate a unique id
+     *
+     * @throws \Exception
      */
     public function generate(): string
     {
-        return Str::orderedUuid()->toString();
+        $uuid = Str::orderedUuid()->toString();
+
+        return \str_replace(search: '-', replace: '', subject: $uuid);
     }
 }
