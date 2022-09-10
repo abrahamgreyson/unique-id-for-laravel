@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class SequenceNumberGenerator implements Contracts\UniqueIdGeneratorInterface
 {
     /**
-     * @param Model $model
+     * @param  Model  $model
      */
     public function __construct(protected Model $model)
     {
@@ -21,7 +21,7 @@ class SequenceNumberGenerator implements Contracts\UniqueIdGeneratorInterface
         // Get increased sequence number from Redis,
         $redis = app('redis');
 
-        $id =  $redis->incr("unique_id:on_table:{$this->model->getTable()}");
+        $id = $redis->incr("unique_id:on_table:{$this->model->getTable()}");
         // If the sequence number is not exist, query the next sequence number from database.
         if ($id === 1) {
             $id = $this->model->max('id') + 1;
