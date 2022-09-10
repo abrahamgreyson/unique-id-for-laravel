@@ -11,8 +11,8 @@ class TimeOrderedUuidGenerator implements Contracts\UniqueIdGeneratorInterface
      */
     public function generate(): string
     {
-        $uuid = Str::orderedUuid()->toString();
+        $uuid = Str::orderedUuid();
 
-        return \str_replace(search: '-', replace: '', subject: $uuid);
+        return bin2hex($uuid->getBytes());
     }
 }
