@@ -1,4 +1,4 @@
-# This is my package string-key-for-laravel
+# WIP ,  not production ready, do not use.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/abe/string-key-for-laravel.svg?style=flat-square)](https://packagist.org/packages/abe/string-key-for-laravel)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/abe/string-key-for-laravel/run-tests?label=tests)](https://github.com/abe/string-key-for-laravel/actions?query=workflow%3Arun-tests+branch%3Amain)
