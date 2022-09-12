@@ -69,9 +69,6 @@ trait HasUniqueId
      */
     public static function getStrategy(): string
     {
-<<<<<<< HEAD
         return config('unique-id.strategy', 'snowflake');
-=======
->>>>>>> 6e43c5327ecc523da3eac1c75115aa489c85d807
     }
 }
