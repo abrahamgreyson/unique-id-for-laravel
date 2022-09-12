@@ -64,10 +64,14 @@ trait HasUniqueId
 
     /**
      * Get strategy to generate a unique id.
+     *
      * @return string
      */
     public static function getStrategy(): string
     {
+<<<<<<< HEAD
         return config('unique-id.strategy', 'snowflake');
+=======
+>>>>>>> 6e43c5327ecc523da3eac1c75115aa489c85d807
     }
 }
