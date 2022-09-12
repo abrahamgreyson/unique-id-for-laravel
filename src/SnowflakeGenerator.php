@@ -27,7 +27,7 @@ class SnowflakeGenerator implements Contracts\UniqueIdGeneratorInterface
         $snowflake = (new Snowflake(datacenter: $dataCenterId, workerid: $nodeId))
             ->setStartTimeStamp($startTimeTimestamp)
             ->setSequenceResolver(function () {
-                return 111111;
+                // todo need resolver for sequence here
                 return mt_rand(0, 4095);
             });
 
