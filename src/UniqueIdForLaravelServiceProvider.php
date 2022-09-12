@@ -16,4 +16,9 @@ class UniqueIdForLaravelServiceProvider extends ServiceProvider
             __DIR__.'/config/unique-id.php' => config_path('unique-id-for-laravel.php'),
         ], 'config');
     }
+
+    public function register()
+    {
+        $this->mergeConfigFrom('../config/unique-id.php', 'unique-id');
+    }
 }

@@ -32,6 +32,8 @@ trait HasUniqueId
      */
     public static function generateUniqueId(): string
     {
+        // Get the strategy to generate a unique id
+        $strategy = static::getStrategy();
         return Uuid::uuid4()->toString();
     }
 
@@ -53,5 +55,14 @@ trait HasUniqueId
     public function getKeyType(): string
     {
         return 'string';
+    }
+
+    /**
+     * Get strategy to generate a unique id.
+     * @return string
+     */
+    public static function getStrategy(): string
+    {
+
     }
 }
