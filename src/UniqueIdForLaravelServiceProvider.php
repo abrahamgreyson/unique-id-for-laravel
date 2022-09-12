@@ -13,12 +13,17 @@ class UniqueIdForLaravelServiceProvider extends ServiceProvider
     {
         // publish the config file to main project
         $this->publishes([
-            __DIR__.'/config/unique-id.php' => config_path('unique-id-for-laravel.php'),
+            __DIR__.'/../config/unique-id.php' => config_path('unique-id.php'),
         ], 'config');
     }
 
+    /**
+     * Register the application services.
+     *
+     * @return void
+     */
     public function register()
     {
-        $this->mergeConfigFrom('../config/unique-id.php', 'unique-id');
+        $this->mergeConfigFrom(__DIR__ . '/../config/unique-id.php', 'unique-id');
     }
 }

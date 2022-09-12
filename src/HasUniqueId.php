@@ -18,9 +18,9 @@ trait HasUniqueId
             $model->{$model->getKeyName()} = static::generateUniqueId();
         });
         static::saving(static function (Model $model) {
-            if (! $model->{$model->getKeyName()}) {
+            if (!$model->{$model->getKeyName()} && $id = static::generateUniqueId()) {
                 // fill the attribute whether it is fillable or not
-                $model->setAttribute($model->getKeyName(), static::generateUniqueId());
+                $model->setAttribute($model->getKeyName(), $id);
             }
         });
     }
@@ -28,13 +28,18 @@ trait HasUniqueId
     /**
      * generate a unique id
      *
-     * @return string
+     * @return string|null
      */
-    public static function generateUniqueId(): string
+    public static function generateUniqueId(): ?string
     {
-        // Get the strategy to generate a unique id
-        $strategy = static::getStrategy();
-        return Uuid::uuid4()->toString();
+        $generator = match (static::getStrategy()) {
+            'uuid' => TimeOrderedUuidGenerator::class,
+            'auto' => null,
+            default => SnowflakeGenerator::class
+        };
+        return is_a($generator, Contracts\UniqueIdGeneratorInterface::class, true)
+            ? app($generator)->generate()
+            : null;
     }
 
     /**
@@ -63,6 +68,6 @@ trait HasUniqueId
      */
     public static function getStrategy(): string
     {
-
+        return config('unique-id.strategy', 'snowflake');
     }
 }
