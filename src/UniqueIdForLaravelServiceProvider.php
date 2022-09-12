@@ -24,6 +24,6 @@ class UniqueIdForLaravelServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/unique-id.php', 'unique-id');
+        $this->mergeConfigFrom(__DIR__.'/../config/unique-id.php', 'unique-id');
     }
 }

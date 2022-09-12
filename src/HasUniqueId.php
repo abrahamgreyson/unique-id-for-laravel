@@ -3,7 +3,6 @@
 namespace UniqueIdForLaravel;
 
 use Illuminate\Database\Eloquent\Model;
-use Ramsey\Uuid\Uuid;
 
 trait HasUniqueId
 {
@@ -18,7 +17,7 @@ trait HasUniqueId
             $model->{$model->getKeyName()} = static::generateUniqueId();
         });
         static::saving(static function (Model $model) {
-            if (!$model->{$model->getKeyName()} && $id = static::generateUniqueId()) {
+            if (! $model->{$model->getKeyName()} && $id = static::generateUniqueId()) {
                 // fill the attribute whether it is fillable or not
                 $model->setAttribute($model->getKeyName(), $id);
             }
@@ -37,6 +36,7 @@ trait HasUniqueId
             'auto' => null,
             default => SnowflakeGenerator::class
         };
+
         return is_a($generator, Contracts\UniqueIdGeneratorInterface::class, true)
             ? app($generator)->generate()
             : null;
