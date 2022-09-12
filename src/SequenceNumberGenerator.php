@@ -21,6 +21,7 @@ class SequenceNumberGenerator implements Contracts\UniqueIdGeneratorInterface
         // Get increased sequence number from Redis,
         $redis = app('redis');
 
+        // todo need distributed lock here
         $id = $redis->incr("unique_id:on_table:{$this->model->getTable()}");
         // If the sequence number is not exist, query the next sequence number from database.
         if ($id === 1) {
