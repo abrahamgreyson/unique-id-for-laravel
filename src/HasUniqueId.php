@@ -32,7 +32,7 @@ trait HasUniqueId
     public static function generateUniqueId(): ?string
     {
         $generator = match (static::getStrategy()) {
-            'uuid' => TimeOrderedUuidGenerator::class,
+            'uuid' => UuidGenerator::class,
             'auto' => null,
             default => SnowflakeGenerator::class
         };
