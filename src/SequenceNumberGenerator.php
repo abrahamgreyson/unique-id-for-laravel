@@ -1,6 +1,6 @@
 <?php
 
-namespace UniqueIdForLaravel;
+namespace Abe\UniqueId;
 
 use Illuminate\Database\Eloquent\Model;
 

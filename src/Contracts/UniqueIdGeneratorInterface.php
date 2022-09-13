@@ -1,6 +1,6 @@
 <?php
 
-namespace UniqueIdForLaravel\Contracts;
+namespace Abe\UniqueId\Contracts;
 
 /**
  * Interface UniqueIdGeneratorInterface

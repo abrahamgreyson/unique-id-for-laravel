@@ -1,6 +1,6 @@
 <?php
 
-namespace StringKeyForLaravel\Database\Factories;
+namespace Abe\UniqueId\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

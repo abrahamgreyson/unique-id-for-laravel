@@ -1,15 +1,15 @@
 {
     "name": "abe/unique-id-for-laravel",
-    "description": "This is my package string-key-for-laravel",
+    "description": "A simple package to generate unique id for laravel",
     "keywords": [
         "laravel",
-        "unique-key-for-laravel",
         "primary key",
         "id",
         "uuid",
-        "snowflake"
+        "snowflake",
+        "unique id"
     ],
-    "homepage": "https://github.com/abrahamgreyson/string-key-for-laravel",
+    "homepage": "https://github.com/abrahamgreyson/unique-id-for-laravel",
     "license": "MIT",
     "authors": [
         {
@@ -39,12 +39,12 @@
     },
     "autoload": {
         "psr-4": {
-            "UniqueIdForLaravel\\": "src"
+            "Abe\\UniqueId\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "UniqueIdForLaravel\\Tests\\": "tests"
+            "Abe\\UniqueId\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -70,11 +70,8 @@
         },
         "laravel": {
             "providers": [
-                "UniqueIdForLaravel\\UniqueIdForLaravelServiceProvider"
-            ],
-            "aliases": {
-                "StringKeyForLaravel": "UniqueIdForLaravel\\Facades\\UniqueIdForLaravel"
-            }
+                "Abe\\UniqueId\\UniqueIdServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",

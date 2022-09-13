@@ -1,6 +1,6 @@
 <?php
 
-namespace UniqueIdForLaravel;
+namespace Abe\UniqueId;
 
 use Ramsey\Uuid\Codec\TimestampFirstCombCodec;
 use Ramsey\Uuid\Generator\CombGenerator;

@@ -1,10 +1,10 @@
 <?php
 
-namespace UniqueIdForLaravel\Commands;
+namespace Abe\UniqueId\Commands;
 
 use Illuminate\Console\Command;
 
-class UniqueIdForLaravelCommand extends Command
+class UniqueIdCommand extends Command
 {
     public $signature = 'abe:key';
 

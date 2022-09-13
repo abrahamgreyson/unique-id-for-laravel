@@ -1,10 +1,10 @@
 <?php
 
-namespace StringKeyForLaravel\Tests;
+namespace Abe\UniqueId\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use StringKeyForLaravel\StringKeyForLaravel\StringKeyForLaravelServiceProvider;
+use Abe\UniqueId\UniqueIdServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,14 +13,14 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'StringKeyForLaravel\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Abe\UniqueId\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
     protected function getPackageProviders($app)
     {
         return [
-            StringKeyForLaravelServiceProvider::class,
+            Abe\UniqueIdServiceProvider::class,
         ];
     }
 

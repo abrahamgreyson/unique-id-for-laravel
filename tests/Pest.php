@@ -1,5 +1,5 @@
 <?php
 
-use StringKeyForLaravel\Tests\TestCase;
+use Abe\UniqueId\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);
