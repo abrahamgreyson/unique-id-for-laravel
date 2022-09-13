@@ -16,7 +16,6 @@ class UuidGenerator implements Contracts\UniqueIdGeneratorInterface
         $factory = new UuidFactory();
         $codec = new TimestampFirstCombCodec($factory->getUuidBuilder());
 
-
         $factory->setRandomGenerator(
             new CombGenerator(
                 $factory->getRandomGenerator(),
