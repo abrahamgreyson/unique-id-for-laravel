@@ -4,7 +4,6 @@ namespace Abe\UniqueId\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Abe\UniqueId\UniqueIdServiceProvider;
 
 class TestCase extends Orchestra
 {
