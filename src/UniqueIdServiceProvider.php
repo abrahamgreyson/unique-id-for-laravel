@@ -4,7 +4,7 @@ namespace Abe\UniqueId;
 
 use Illuminate\Support\ServiceProvider;
 
-class UniqueIdForLaravelServiceProvider extends ServiceProvider
+class UniqueIdServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
