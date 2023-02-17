@@ -26,6 +26,6 @@ class SequenceNumberGenerator implements Contracts\UniqueIdGeneratorInterface
             $redis->set("unique_id:on_table:{$this->model->getTable()}", $id);
         }
 
-        return $id;
+        return (string) $id;
     }
 }

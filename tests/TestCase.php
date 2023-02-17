@@ -2,6 +2,7 @@
 
 namespace Abe\UniqueId\Tests;
 
+use Abe\UniqueId\UniqueIdServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -19,7 +20,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            Abe\UniqueIdServiceProvider::class,
+            UniqueIdServiceProvider::class
         ];
     }
 
