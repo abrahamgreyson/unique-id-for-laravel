@@ -6,9 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class SequenceNumberGenerator implements Contracts\UniqueIdGeneratorInterface
 {
-    /**
-     * @param  Model  $model
-     */
     public function __construct(protected Model $model)
     {
     }

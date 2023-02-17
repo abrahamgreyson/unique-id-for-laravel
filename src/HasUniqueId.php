@@ -26,8 +26,6 @@ trait HasUniqueId
 
     /**
      * generate a unique id
-     *
-     * @return string|null
      */
     public static function generateUniqueId(): ?string
     {
@@ -44,8 +42,6 @@ trait HasUniqueId
 
     /**
      * Get the value indicating whether the IDs are incrementing.
-     *
-     * @return bool
      */
     public function getIncrementing(): bool
     {
@@ -54,8 +50,6 @@ trait HasUniqueId
 
     /**
      * Set the data type for the primary key.
-     *
-     * @return string
      */
     public function getKeyType(): string
     {
@@ -64,8 +58,6 @@ trait HasUniqueId
 
     /**
      * Get strategy to generate a unique id.
-     *
-     * @return string
      */
     public static function getStrategy(): string
     {
