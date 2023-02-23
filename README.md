@@ -13,20 +13,20 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 You can install the package via composer:
 
 ```bash
-composer require abe/string-key-for-laravel
+composer require abe/unique-id-for-laravel
 ```
 
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --tag="string-key-for-laravel-migrations"
+php artisan vendor:publish --tag="unique-id-for-laravel-migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="string-key-for-laravel-config"
+php artisan vendor:publish --tag="unique-id-for-laravel-config"
 ```
 
 This is the contents of the published config file:
@@ -36,16 +36,10 @@ return [
 ];
 ```
 
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="string-key-for-laravel-views"
-```
-
 ## Usage
 
 ```php
-$stringKeyForLaravel = new StringKeyForLaravel\UniqueIdForLaravel();
+$stringKeyForLaravel = new Abe\UniqueId();
 echo $stringKeyForLaravel->echoPhrase('Hello, StringKeyForLaravel!');
 ```
 
